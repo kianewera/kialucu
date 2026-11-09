@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Drip Client Store</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><a class="brand" href="#">DRIP<span>CLIENT</span></a><button id="adminBtn" class="ghost">Admin</button></header>
+<main>
+<section class="hero"><p class="eyebrow">DIGITAL PRODUCTS STORE</p><h1>Temukan produk<br><span>digital pilihanmu.</span></h1><p>Katalog produk diperbarui dari API Drip.</p></section>
+<section class="toolbar"><input id="search" placeholder="Cari produk..." aria-label="Cari produk"><button id="reload">Muat ulang</button></section>
+<div id="status" class="status">Memuat katalog…</div><section id="products" class="products"></section>
+</main>
+<footer>DRIP CLIENT STORE · Powered by Drip API</footer>
+<div id="loginModal" class="modal hidden"><form id="loginForm" class="panel"><button type="button" class="close" data-close>×</button><p class="eyebrow">AREA ADMIN</p><h2>Masuk Admin</h2><label>Username<input name="username" autocomplete="username" required></label><label>Password<input name="password" type="password" autocomplete="current-password" required></label><button class="wide">Login</button><p id="loginError" class="error"></p></form></div>
+<div id="adminModal" class="modal hidden"><section class="panel adminpanel"><button class="close" data-close>×</button><p class="eyebrow">CONTROL CENTER</p><h2>Dashboard Admin</h2><div class="stats"><div><small>Saldo API</small><strong id="balance">—</strong></div><div><small>Produk</small><strong id="count">—</strong></div></div><div class="actions"><button id="balanceBtn">Cek saldo</button><button id="adminReload" class="ghost">Refresh produk</button><button id="logout" class="danger">Keluar</button></div><h3>Pesan key (khusus admin)</h3><label>SKU<select id="sku"></select></label><label>Jumlah<input id="qty" type="number" min="1" max="50" value="1"></label><button id="orderBtn" class="wide">Buat pesanan API</button><pre id="orderResult" class="result">Hasil pesanan akan tampil di sini.</pre><p class="note">Tombol pesanan langsung memotong saldo wallet API. Pastikan pembayaran pelanggan sudah diterima sebelum menjalankannya.</p></section></div>
+<script src="app.js"></script>
+</body></html>
